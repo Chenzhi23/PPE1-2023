@@ -3,3 +3,71 @@
 a
 b
 c
+## Seance du 27 Sep
+pwd
+ls
+mkdir ppe1
+mv ~/downloads/fichiers.zip ~/ppe1
+cd ~/ppe1
+ls
+unzip fichiers.zip
+mkdir classification
+cd classification
+mkdir txt ann img
+mkdir ./txt/2016 ./txt/2017 ./txt/2018
+mkdir ./txt/2016/01 ./txt/2016/02 ./txt/2016/03 ./txt/2016/04 ./txt/2016/05 ./txt/2016/06 ./txt/2016/07 ./txt/2016/08 ./txt/2016/09 ./txt/2016/10 ./txt/2016/11 ./txt/2016/12
+mkdir ./txt/2017/01 ./txt/2017/02 ./txt/2017/03 ./txt/2017/04 ./txt/2017/05 ./txt/2017/06 ./txt/2017/07 ./txt/2017/08 ./txt/2017/09 ./txt/2017/10 ./txt/2017/11 ./txt/2017/12 ./txt/2018/01 ./txt/2018/02 ./txt/2018/03 ./txt/2018/04 ./txt/2018/05 ./txt/2018/06 ./txt/2018/07 ./txt/2018/08 ./txt/2018/09 ./txt/2018/10 ./txt/2018/11 ./txt/2018/12
+mkdir ./ann/2016 ./ann/2017 ./ann/2018 ./img/paris ./img/kyoto
+mkdir ./ann/2016/01 ./ann/2016/02 ./ann/2016/03 ./ann/2016/04 ./ann/2016/05 ./ann/2016/06 ./ann/2016/07 ./ann/2016/08 ./ann/2016/09 ./ann/2016/10 ./ann/2016/11 ./ann/2016/12 ./ann/2017/01 ./ann/2017/02 ./ann/2017/03 ./ann/2017/04 ./ann/2017/05 ./ann/2017/06 ./ann/2017/07 ./ann/2017/08 ./ann/2017/09 ./ann/2017/10 ./ann/2017/11 ./ann/2017/12 ./ann/2018/01 ./ann/2018/02 ./ann/2018/03 ./ann/2018/04 ./ann/2018/05 ./ann/2018/06 ./ann/2018/07 ./ann/2018/08 ./ann/2018/09 ./ann/2018/10 ./ann/2018/11 ./ann/2018/12
+tree classification
+tree -help
+tree
+cd ppe1
+mv ~/ppe1/Fichiers/*Paris* ~/ppe1/classification/img/paris
+mv ~/ppe1/Fichiers/*Kyoto* ~/ppe1/classification/img/kyoto
+mv ~/ppe1/Fichiers/2016*.txt ~/ppe1/classification/txt/2016
+mv ~/ppe1/Fichiers/2017*.txt ~/ppe1/classification/txt/2017
+mv ~/ppe1/Fichiers/2018*.txt ~/ppe1/classification/txt/2018
+mv ~/ppe1/Fichiers/2016*.ann ~/ppe1/classification/ann/2016
+mv ~/ppe1/Fichiers/2017*.ann ~/ppe1/classification/ann/2017
+mv ~/ppe1/Fichiers/2018*.ann ~/ppe1/classification/ann/2018
+cd ./txt/2016
+mv *01*.txt 01 
+mv ./01/*01*.txt ./
+mv *_01_*.txt 01 
+mv *_02_*.txt 02 
+mv *_03_*.txt 03 
+mv *_04_*.txt 04 
+mv *_05_*.txt 05 
+mv *_06_*.txt 06 
+mv *_07_*.txt 07 
+mv *_08_*.txt 08 
+mv *_09_*.txt 09 
+mv *_10_*.txt 10 
+mv *_11_*.txt 11 
+mv *_12_*.txt 12 
+cd ../2017
+mv *_01_*.txt 01
+mv *_02_*.txt 02
+mv *_03_*.txt 03
+mv *_04_*.txt 04
+mv *_05_*.txt 05
+mv *_06_*.txt 06
+mv *_07_*.txt 07 
+mv *_08_*.txt 08
+mv *_09_*.txt 09
+mv *_10_*.txt 10
+mv *_11_*.txt 11
+mv *_12_*.txt 12
+cd ../2018
+mv *_01_*.txt 01 ; mv *_02_*.txt 02 ;\nmv *_03_*.txt 03 ;\nmv *_04_*.txt 04 ;\nmv *_05_*.txt 05 ;\nmv *_06_*.txt 06 ;\nmv *_07_*.txt 07 ;\nmv *_08_*.txt 08 ;\nmv *_09_*.txt 09 ; \nmv *_10_*.txt 10 ;\nmv *_11_*.txt 11 ;\nmv *_12_*.txt 12 
+cd ../../ann
+cd 2016
+mv *_01_*. 01 ; mv *_02_*. 02 ;\nmv *_03_*. 03 ; \nmv *_04_*. 04 ; \nmv *_05_*. 05 ; \nmv *_06_*. 06 ; \nmv *_07_*. 07 ; \nmv *_08_*. 08 ; \nmv *_09_*. 09 ;  \nmv *_10_*. 10 ; \nmv *_11_*. 11 ; \nmv *_12_*. 12
+mv *_01_* 01 ; mv *_02_* 02 ;\nmv *_03_* 03 ; \nmv *_04_* 04 ; \nmv *_05_* 05 ; \nmv *_06_* 06 ; \nmv *_07_* 07 ; \nmv *_08_* 08 ; \nmv *_09_* 09 ;  \nmv *_10_* 10 ; \nmv *_11_* 11 ; \nmv *_12_* 12
+cd ../2017 ; mv *_01_* 01 ; mv *_02_* 02 ; \nmv *_03_* 03 ; \nmv *_04_* 04 ; \nmv *_05_* 05 ;   \nmv *_06_* 06 ; \nmv *_07_* 07 ; \nmv *_08_* 08 ; \nmv *_09_* 09 ; \nmv *_10_* 10 ; \nmv *_11_* 11 ; \nmv *_12_* 12 
+cd ../2018 ; mv *_01_* 01 ; mv *_02_* 02 ; \nmv *_03_* 03 ;\nmv *_04_* 04 ;\nmv *_05_* 05 ;\nmv *_06_* 06 ;\nmv *_07_* 07 ;\nmv *_08_* 08 ;\nmv *_09_* 09 ;\nmv *_10_* 10 ;\nmv *_11_* 11 ;\nmv *_12_* 12
+pwd
+cd ../../
+tree
+
