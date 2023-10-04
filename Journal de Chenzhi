@@ -71,4 +71,9 @@ pwd
 cd ../../
 tree
 ##Seance du 4 Oct.
+<<<<<<< HEAD
 i am message errone
+=======
+i am message errone
+"I AM ERROR"
+>>>>>>> 9a1a8034469494b8c9f7d5ef58b47b4edbcd1013
