@@ -1,4 +1,5 @@
 # Journal de Chenzhi
+<<<<<<< Updated upstream
 ## Seance du 20 Sep
 a
 b
@@ -77,3 +78,19 @@ i am message errone
 i am message errone
 "I AM ERROR"
 >>>>>>> 9a1a8034469494b8c9f7d5ef58b47b4edbcd1013
+=======
+
+## Séance 1_20 sep
+Pour la première séance, je me suis familiarisé avec le systeme de fichier. Saisir comment identifier le chemin de quelques fichiers ciblés.
+En même temps, je sais la grammaire du langage, comme la syntaxe d'une commande. En plus, j'essaies de bien connaître certaines commandes courantes, comme "pwd", "ls", "cd", "mkdir"...
+Cependant, j'ai besoin de mieux me familiariser avec telles commandes, surtout celles sur les informations de ce fichiers.
+## Séance 2_27 sep
+Après la présentation proposée par les profs, je sais bien ranger les fichiers avec le terminal.
+D'abord, je crée un dossier "ppe1"pour déposer les fichiers. Puis je me rend au dossier cible "ppe1" et crée des dossiers différents "txt", "ann", "img". Donc je déplace le fichier zip que je viens de télécharger dans le dossier cible.
+Puis on crée des dossiers différents selon les types variants, les dates avec la commande "mkdir". L'étape prochaine, c'est de déplacer les fichiers à bien classer. J'utilise beaucoup de commandes comme "mv ~/ppe1/Fichiers/*Paris* ~/ppe1/classification/img/paris", "mv ~/ppe1/Fichiers/2016*.txt ~/ppe1/classification/txt/2016", "mv *_01_*.txt 01".
+Bien sûr, je vérife souvent leur place à l'aide de "ls". Et pour illustrer le classement en arborescence, je commande comme "tree classification" (classification est un dossier).
+Enfin, je tape "tree" afin d'atteindre le but de montrer l'arborescence du classement.
+
+##Séance 3_ 4 oct
+i am message errone
+>>>>>>> Stashed changes
