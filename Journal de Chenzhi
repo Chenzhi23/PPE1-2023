@@ -12,7 +12,9 @@ Puis on crée des dossiers différents selon les types variants, les dates avec 
 Bien sûr, je vérife souvent leur place à l'aide de "ls". Et pour illustrer le classement en arborescence, je commande comme "tree classification" (classification est un dossier).
 Enfin, je tape "tree" afin d'atteindre le but de montrer l'arborescence du classement.
 
-## Séance 3_ 4 oct
-i am message errone
->>>>>>> Stashed changes
 ## Séance 3_4 oct
+En ce cours, il est important de savoir comment corriger les erreurs en utilisant les commandes git reset/revert. Mais aujourd'hui on se concentre plutôt sur "git reset". "git reset" contient quelques options comme "HEAD", "--soft", "--hard". Et plus facilement et rapidement, nous pouvons utiliser SHA (le code de commit) pour "reset".
+
+Nb: 
+Des questions : 1. Comment utiliser "HEAD" ? Après "git reset HEAD^", la commande "git pull" ne marche pas quand même. Mais après "git reset --hard", la commande  "git pull" marche bien. Même si je sais "--hard" qui supprime tous les changements en notre ordinateur.
+2. Quelle est la différence entre origin, main, origin/main ?
