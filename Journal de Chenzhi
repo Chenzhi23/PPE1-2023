@@ -21,3 +21,7 @@ Des questions : 1. Comment utiliser "HEAD" ? Après "git reset HEAD^", la comman
 
 Réponse :
 "git reset HEAD^", en effet, c'est "git reset --mixed HEAD^". Autrement dit : "git reset HEAD^" = "git reset --mixed HEAD^". Dans ce cas-là, on revient à la version du dépôt et annule la mise-en-place (add+commit), mais la modification reste encore dans le working directory.
+
+Ajout de l'information :
+N'oubliez pas de créer des tags après chaque séance. 
+Il faut comprendre la différence entre "reset" et "revert".
