@@ -25,3 +25,5 @@ Réponse :
 Ajout de l'information :
 N'oubliez pas de créer des tags après chaque séance. 
 Il faut comprendre la différence entre "reset" et "revert".
+
+## Séance 4_11 oct
