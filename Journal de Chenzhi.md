@@ -27,3 +27,13 @@ N'oubliez pas de créer des tags après chaque séance.
 Il faut comprendre la différence entre "reset" et "revert".
 
 ## Séance 4_11 oct
+Dans cette séance, on apprend à comprendre les mécanismes des pipelines et des scripts.
+### Pipelines
+D'abord, il nous faut comprendre l'entrée et la sortie en utilisant le chevron. Et il faut noter que le chevron simple va effacer le contenu qui est déjà existé dans un fichier. Donc, quand on veut ajouter plusieur éléments dans un seul fichier, il faut utiliser `>>` après le premier insertion (`>`).
+Ensuite, il y a des ordres sévères pour la marche. Quand on veut prendre plusieurs commandes en une ligne de commande, il faut utiliser `|` afin de séparer les commandes différentes et prendre en compte l'ordre des commandes. Car l'ordre différent va sortir les résultats différents.
+Et il faut se familiariser les commandes que l'on a déjà apprises avant.
+### Scripts
+1. Après la création d'un script, il faut le rendre exécutable. `chmod +x *.sh`
+2. On peut ajouter des commentaires dans notre script en utiliser `#`. Dans ce cas-là, il nous aide à mémoriser des choses importantes ou indiquer quelques autres.
+3. Les arguments et les variables sont des éléments importants dans les scripts. N'oublie pas à utiliser `$`. C'est le signal indispensable pour donner la valeur.
+NB : `$1`,`$2` peuvent indiquer le premier et deuxième arguments pour le script.
