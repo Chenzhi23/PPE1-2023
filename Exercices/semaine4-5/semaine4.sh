@@ -12,3 +12,11 @@ echo "Locations en 2018" >> reponses.txt
 cat ./2018/*/* | grep Location | wc -l >> reponses.txt
 ##Afficher le résultat
 cat reponses.txt
+
+#########################################################
+##Pas de arguments inséreés, donc pas besoin d'amélioration. Et voici les scripts ci-dessous plus profonde :
+Exercice 1 : [ici](/Exercices/semaine4_exo1.sh) et [ici](/Exercices/semaine4_exo1_2.sh)
+
+Exercice 2 : [ici](/Exercices/semaine4_exo2.sh)
+
+

@@ -37,3 +37,49 @@ Et il faut se familiariser les commandes que l'on a déjà apprises avant.
 2. On peut ajouter des commentaires dans notre script en utiliser `#`. Dans ce cas-là, il nous aide à mémoriser des choses importantes ou indiquer quelques autres.
 3. Les arguments et les variables sont des éléments importants dans les scripts. N'oublie pas à utiliser `$`. C'est le signal indispensable pour donner la valeur.
 NB : `$1`,`$2` peuvent indiquer le premier et deuxième arguments pour le script.
+
+## Séance 5_18 oct
+Dans cette séance, on va plus loin dans le script.
+### Instructions de contrôle
+#### L'instruction `if`
+1. Besoin de `[]` pour entourer les conditions.
+2. Besoin de `[[]]` pour utiliser des expressions régulières.
+3. En utilisant des expressions régulières, besoin de espaces entre `[[]]` et entre `=~`.
+4. Séparer les différentes conditions avec `&&`.
+5. N'oublie pas `-` pour les conditions sur les entiers.
+6. N'oublie le langage `then`, `else`, `fi`.
+
+#### Les boucles `for`
+1. `for .. in ..`, `do -> done`
+2. On peut sortir avec la commande `exit`.
+3. La commande `expr` est une calculatrice.
+4. N'oublie pas `$` pour citer la variable.
+5. `N=$(expr $N+1)` pour plus(+).
+
+#### Les boucles `while`
+1. `while`, `do -> done`
+2. On peut utiliser `read` pour inséser quelques choses en dedant, le contenu est l'argument que l'on tape. Il équivaut à `input` dans le python.
+3. `read -r` pour ignorer `\` qui est utilisé souvent en `\n` pour sauter la ligne.
+4. On peut l'utiliser avec la commande `if`.
+5. On peut insérer des fichiers avec `<` en se situant après `done`. Et même si le fichier inséré ne se situe pas dans le même dossier que le script, on peut utiliser des chemins corrects pour citer les fichiers.
+6. Pour terminer le programme, on utilise la commande `control + c`.
+
+### Web
+#### Connaissance sur HTML
+1. C'est un langage de balisage pour affichier des pages web.
+2. Il nous permet de structurer l'information, enrichir le texte.
+3. Avec lui, nous pouvons dialoguer avec internet bien sûr à l'aide des outils intéressants.
+4. Les codes comme `404` sont des HTTP réponses. Les différents codes nous permettent de savoir qu'est-ce que se passe-t-il pour le web.
+
+#### Outils pour web
+1. Deux outils utils (lynx et cURL) sont été introduits pour dialoguer avec internet.
+2. Avec les outils, nous pouvons affichier des webpage en terminal dans notre ordinateur.
+3. Pour `lynx`, `lynx -dump URL` pour récupérer le contenu textuel d'une page. En ajoutant `-nolist` pour retirer la liste des liens. Et sans les options, `lynx URL` peut nous montrer le webpage, et on peut faire des choses comme dans le navigateur.
+4. Pour `curl`, il nous permet de récupérer des pages web. La commande est `curl -option URL`. Et les profs nous montrent de nombreuses options utiles comme `-i` (des informations concernant le web), `-L` (suit le redictions), `-o`, etc.
+5. Après la pratique nous-même, nous trouvons que la correction de URL est nécessaire. Parce que le lien de web n'est pas toujours pareil. Comme `http` et `https`, c'est facile à les confondre.
+
+
+
+
+
+
