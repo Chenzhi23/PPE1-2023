@@ -51,7 +51,7 @@ Résultat : 699 France
 `cat ./*/03/* | cut -f 3 | sort | uniq -c | sort -nr | head`
 
 ## Exercices de scripts
-1. Écrire un script qui donne le nombre de Location par année : [ici](/Exercices/semaine4.sh)
+1. Écrire un script qui donne le nombre de Location par année : [ici](/Exercices/semaine4-5/semaine4.sh)
 
 2. Exercice 1 : [ici](/Exercices/semaine4-5/semaine4_exo1.sh) et [ici](/Exercices/semaine4-5/semaine4_exo1_2.sh)
 
