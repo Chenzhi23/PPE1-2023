@@ -78,8 +78,21 @@ Dans cette séance, on va plus loin dans le script.
 4. Pour `curl`, il nous permet de récupérer des pages web. La commande est `curl -option URL`. Et les profs nous montrent de nombreuses options utiles comme `-i` (des informations concernant le web), `-L` (suit le redictions), `-o`, etc.
 5. Après la pratique nous-même, nous trouvons que la correction de URL est nécessaire. Parce que le lien de web n'est pas toujours pareil. Comme `http` et `https`, c'est facile à les confondre.
 
+## Séance 6_25 oct
+D'abord, on a bien parcourir des projets de l'année dernière. En même temps, les profs nous expliquent les détails des projets, surtout pour les tableaux qui sont les plus importants de nos projets. Donc on apprend comment construire des tableaux en détail.
 
+### Mini-projet
+1. Première étape, c'est de récolter des données nécessaires. (Mais avant, il nous faut déterminer notre choix de mot)
+2. Ce pourrait être un travail individuel. Autrement dit, nous pouvons récolter des données nous-même pour chaque partie indispensable.
+3. Récolter des données comme `code`, `URl`, `encodage`, `occurence` etc à l'aide des scripts.
+4. Étape générale pour la récolte : d'abord, il faut lire et chercher des mots cibles sur Internet afin d'obtenir des URLs ; ensuite, il est recommendé de tirer des informations importantes venant de URLs avec des scripts.
+5. Récolter des données de versions différents (en langue différente) dans les `.txt` varaints.
 
-
+### Scripts
+1. Faire attention à l'utilisation de `then`,`fi` pour la commande `if` au lieu de `do` et `done`. En général, `then`,`fi` pour la commande `if` ; `do` et `done` utilisés dans les boucles.
+2. Dans la commande de insérer des arguments, il faut utiliser `read` au lieu de `cat`. Parce que `read` peut read des importations d'utilisateurs et le prend comme argument.
+3. Dans `ligne=$( expr $ligne + 1 )` , il est imporatnt de faire attention à `+` : il y a des espaces à côté de `+`. Sinon, ça marche pas.
+4. `echo -e "$ligne\t$line"` : afin d'accepter la tabulation dans le `echo`, il est nécessaire d'utiliser l'option `-e`. Et dans ce cas-là, il faut utiliser `""` pour adjuster la tabulation (en général, on n'a pas besoin de `""` pour `echo` des varaibales avec `$`).
+5. `code=$(curl -Ils $line | grep -e "^HTTP/" | grep -Eo "[0-9]{3}")` pour obtenir le code HTTP en utilisant `curl`. Il faut attacher de l'importance de l'option `-e` de `grep` : c'est de utiliser l'expression régulière pour correspondre à ce que l'on veut.
 
 
