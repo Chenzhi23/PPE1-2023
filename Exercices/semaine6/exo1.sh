@@ -22,6 +22,7 @@ fi
 fichier_urls=$1
 ligne=0
 while read -r line
+##### rend la valeur demandé par 'read' à la variable 'line' (pas besoin de '$' pour 'line')
 do
     ligne=$( expr $ligne + 1 )
     ####besoin de espace entre `+` et `1`; à côté de `+`

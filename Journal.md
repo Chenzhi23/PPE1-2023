@@ -95,4 +95,39 @@ D'abord, on a bien parcourir des projets de l'année dernière. En même temps, 
 4. `echo -e "$ligne\t$line"` : afin d'accepter la tabulation dans le `echo`, il est nécessaire d'utiliser l'option `-e`. Et dans ce cas-là, il faut utiliser `""` pour adjuster la tabulation (en général, on n'a pas besoin de `""` pour `echo` des varaibales avec `$`).
 5. `code=$(curl -Ils $line | grep -e "^HTTP/" | grep -Eo "[0-9]{3}")` pour obtenir le code HTTP en utilisant `curl`. Il faut attacher de l'importance de l'option `-e` de `grep` : c'est de utiliser l'expression régulière pour correspondre à ce que l'on veut.
 
+## Séance 7_8 onv
+Dans cette séance, on a corrigé les scripts de la semaine dernière et a appris les nouvlles options pour 'curl'.
 
+### Des commentaires pour les scripts et la correction
+1. Concerant l'ajout de shebang, n'oublie pas de `/` tout avant. Par exemple `#!/usr/bin/env zsh`
+2. Pour la commande `curl`, l'option de redirection `-L` doit être majuscule. `-L` et `-l` n'est pas la même chose.
+3. `-P` et `-E` sont l'exension de la commande `grep` pour adjuster le langage regulier.
+4. L'explication sur `charset=$(curl -s -I -L -w  "%{content_type}" -o /dev/null $URL ｜ grep -P -o "charset=\S+" | cut -d"=" -f2 | tail -n 1)`
+5. `-s` pour ignorer le processus et les infos erreurs de la commande `curl`
+6. `-I` pour obtenir les headers de HTTP, pas toutes les infos de HTTP
+7. `-L` la redirection : lorsque l'on entre dans un HTTP, il va saute dans un autre HTTP. `-L` nous aide à saisir les infos de nouveau HTTP
+8. `-w "%{content_type}"` : `-w` pour déterminer la formation de output ; `%{content_type}` est format spécifique (non-varaible)
+9. `-o` seulement affichier ce que on veut
+10. `/dev/null` après l'affichage, jeter les infos de HTTP
+11. `"charset=\S+"` : `\S` indique le complément de espace 
+12. `cut -d"=" -f2` : `-d"="` délimiter en prenant "=" comme balise
+
+### Exercices de la semaine 7
+05-miniprojet-exercices-supplémentaires.pdf
+
+#### Exercice 1
+1. D'abord, afin de transformer le texte pour obtenir un mot par ligne, on utilise la commande `grep` : `grep -o "\b[[:alpha:]]\+\b" candide.txt > candide_motisole.txt`. Rendre les mots dans le fichier "candide_motisole".
+2. Ensuite pour nettoyer les ponctuations et les majuscules, on a recours de la commande 'tr' en transfomant tous les majuscules en miniscules : `tr '[[:upper:]]' '[[:lower:]]'`. Autrement dit, on a amélioré notre commande `grep -o "\b[[:alpha:]]\+\b" candide.txt | tr '[[:upper:]]' '[[:lower:]]' > candide_motisole.txt`. Au passage, on peut aussi remplacer `\b[[:alpha:]]\+\b` par `\w+` mais il faut utiliser `egrep`.
+
+#### Exercice 2
+1. Presque pareil avec exo1, justment ajouter la varaible `$2` pour afficher le nombre des fréquences
+2. `$2` est optionnel, donc on a besoin de créer une boucle pour mettre 25 à la place de `$2` pour la variable `$nb`
+
+#### Exercice 3
+1. En utilisant `paste` pour obtenir le bigramme
+2. `paste exo3_bigramme1.txt <(tail -n +2 exo3_bigramme1.txt)` : `tail -n +2 exo3_bigramme1.txt` pour obtenir les lignes depuis 2eme ligne du fichier ; `paste` rendre ces lignes dans le fichier "exo3-bigramme1.txt"
+
+### Miniprojet
+1. Récupéer les liens web dans le `./miniprojet/urls/fr.txt`
+2. Utilier les scripts avant afin de prendre les infos basiques des liens
+3. Ajouter l'entête et corpus dans le fichier "tableau-fr.html"
