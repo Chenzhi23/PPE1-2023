@@ -95,7 +95,7 @@ D'abord, on a bien parcourir des projets de l'année dernière. En même temps, 
 4. `echo -e "$ligne\t$line"` : afin d'accepter la tabulation dans le `echo`, il est nécessaire d'utiliser l'option `-e`. Et dans ce cas-là, il faut utiliser `""` pour adjuster la tabulation (en général, on n'a pas besoin de `""` pour `echo` des varaibales avec `$`).
 5. `code=$(curl -Ils $line | grep -e "^HTTP/" | grep -Eo "[0-9]{3}")` pour obtenir le code HTTP en utilisant `curl`. Il faut attacher de l'importance de l'option `-e` de `grep` : c'est de utiliser l'expression régulière pour correspondre à ce que l'on veut.
 
-## Séance 7_8 onv
+## Séance 7_8 nov
 Dans cette séance, on a corrigé les scripts de la semaine dernière et a appris les nouvlles options pour 'curl'.
 
 ### Des commentaires pour les scripts et la correction
@@ -131,3 +131,18 @@ Dans cette séance, on a corrigé les scripts de la semaine dernière et a appri
 1. Récupéer les liens web dans le `./miniprojet/urls/fr.txt`
 2. Utilier les scripts avant afin de prendre les infos basiques des liens
 3. Ajouter l'entête et corpus dans le fichier "tableau-fr.html"
+
+## Séance 8_15 nov
+
+### Correction
+1. `"\w"` ne peut pas identifier des caractères diacrités 
+2. `"\p{Latin}"` pour correspondre aux caractères de latin. Il est lié à Unicode. Et on peut changer `latin` (latin et Latin) par `Han` etc.
+3. `if [ ! -f "$1"]` : le premier argument `$1` n'est pas `!` un fichier `-f`.
+4. `tail` est contraire au `head` : `tail +2` signifie que choisir de la fin à la deuxième ligne(`[2:]`)
+5. Différence entre `^` `$` et `\b`. Ex : 
+`^word` correspond aux chaînes caractères qui commence par "word"
+`word$` correspond aux chaînes caractères qui se termine par "word"
+`\bword\b` correspond aux chaînes caractères qui sont "word"
+6. Sur mon mac, `grep -P` ne marche pas. Il faut extension `ggrep -P`.
+
+
