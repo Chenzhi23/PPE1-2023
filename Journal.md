@@ -145,4 +145,22 @@ Dans cette séance, on a corrigé les scripts de la semaine dernière et a appri
 `\bword\b` correspond aux chaînes caractères qui sont "word"
 6. Sur mon mac, `grep -P` ne marche pas. Il faut extension `ggrep -P`.
 
+### Mini-projet
+#### Scripts
+1. `wc -l fichier` : calculer la ligne par `\n` qui se trouve à la fin d'une ligne
+2. `while read -r line` : aussi calculer la ligne par `\n` qui se trouve à la fin d'une ligne pour `read` les `line` ("line" est justement un nom de varaible)
+3. `cat $fichier_urls | while read line` : l'output de `cat` comme input de `read` (rendant à la varaibale "line")
 
+#### Html
+1. `<!-- -->` : les moyens de commentaires dans html
+2. `<a href="xxx">Les annotations sur les liens<\a>` : creer les liens sur "xxx" (qui est un chemin vers le fichier cible)
+3. `<br />` : sauter à la ligne
+
+## Séance 9_22 nov
+
+### Notifications 
+1. 协同合作不能同时操作一个文件
+2. 但是可以同时操作不同的文件
+3. 操作不同的文件后，要add和commit加上被你操作的文件路径，然后再pull下来远程库的东西，在push
+不能不能add+. 否则不能成功push上去内容
+4. 只创建新的文件夹没有用，要文件夹里有文件，才有push上去，不然一直显示already updated
