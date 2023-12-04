@@ -164,3 +164,24 @@ Dans cette séance, on a corrigé les scripts de la semaine dernière et a appri
 3. 操作不同的文件后，要add和commit加上被你操作的文件路径，然后再pull下来远程库的东西，在push
 不能不能add+. 否则不能成功push上去内容
 4. 只创建新的文件夹没有用，要文件夹里有文件，才有push上去，不然一直显示already updated
+
+## Séance 10_29 nov
+
+### Correction
+1. `basename` pour relever l'extension du fichier : `lang=$(basename fr.txt .txt)` = `lang=fr`
+2. `grep -c "robot" test.txt` = ?? `grep -w -i -o "robot" test.txt | wc -l` : "-o" est important (sinon, on compte une fois pour une ligne qui compte plusieurs "robot")
+3. `grep -A 2 -B 2 test.txt` = `grep -C 2 test.txt` 
+#### Dernière question :
+1. `grep -P "robot" test.txt | sed "s/\(robot\)/\t\1\t/g"` 
+2. `grep -o -P "(\w+){5}robot" test.txt | sed "s/\(robot\)/\t\1\t/g"`
+3. `grep -o -i -P "(\w+){5}robot" test.txt` ： `(\w+){5}`表示单词robot前面的五个单词
+4. `grep -o -i -P "(\w+\s){0,5}robot" test.txt`
+5. `grep -o -i -P "(\w+\s){0,5}robot(\s\w+){0,5}" test.txt`
+6. `grep -o -i -P "(\w+\W){0,5}robots?(\W\w+){0,5}" test.txt`
+7. `grep -o -i -P "(\w+\W){0,5}robots?(\W\w+){0,5}" test.txt | sed "s/\(robots?\)/\t\1\t/g"`
+
+#### Itrameur
+1. Il vaux mieux de changer les noms de dossier et de fichier comme `fichier-lang-nb`
+2. `for nb in {1..50}` au lieu de `for nb in range(1,51)` : différence entre Python et Sh
+3. Après XML, il y a des caractères mal rendus : faut utiliser `sed` remplacer des caractères bizzares 
+4. En traitant les fichier fr et jp, sed ne marche pas : problème rencontré `sed: RE error: illegal byte sequence`
