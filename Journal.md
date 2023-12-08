@@ -185,3 +185,21 @@ Dans cette séance, on a corrigé les scripts de la semaine dernière et a appri
 2. `for nb in {1..50}` au lieu de `for nb in range(1,51)` : différence entre Python et Sh
 3. Après XML, il y a des caractères mal rendus : faut utiliser `sed` remplacer des caractères bizzares 
 4. En traitant les fichier fr et jp, sed ne marche pas : problème rencontré `sed: RE error: illegal byte sequence`
+
+
+## Séance 11_6 dec
+
+### Correction de Itrameur
+1. `for filename in $(ls "$FOLDER/$lang-*.txt")` pour affichier des fichiers existants
+2. Des methodes de `sed`:
+- 1. `cleaned=$(echo $contenu | sed 's/&/&amp;/g')`
+ `cleaned=$(echo $contenu | sed 's/</&lt;/g')`
+ `cleaned=$(echo $contenu | sed 's/>/&gt;/g')`
+- 2.  `cleaned=$(echo $contenu | sed -e 's/&/&amp;/g' -e 's/</&lt;/g' -e 's/>/&gt;/g')`
+- 3. `cleaned=$((echo $contenu | sed 's/&/&amp;/g';'s/</&lt;/g';'s/>/&gt;/g')`
+3. sed 报错可能是encoding不是utf-8，需要在代码里转化成utf-8 : `iconv -f "$encoding" -t "UTF-8"`
+4. chercher des concordances en python
+`python3 ./coocurrence.py ficher itrameur_correction/tokenization... .txt   --target "robot.*" -N 20 -s i --match-mode regex`
+`python3 ./coocurrence.py ficher itrameur_correction/tokenization... .txt   --target "robot" -N 20 -t itrameur`
+5. `wordcloud_cli --text ch-1.txt --image image.png` pour afficher les image (creer un fichier nomme image.png)
+6. `wordcloud_cli --text ch-1.txt --image image.png --scale 3 --fontfile Systeme/Libary/Fonts` pour resoudre les problemes de ch et jp
